@@ -10,7 +10,7 @@ import Combine
 @MainActor
 class ContentViewModel : ObservableObject {
     @Dependency(\.movieAPI) var movieAPI
-    @Published public private(set) var message: String?
+    var message: String?
 
         //Values in these two properties could be potentially persisted
     @Published public private(set) var movies: [Movie] = []

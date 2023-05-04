@@ -41,9 +41,9 @@ struct MovieCell: View {
 }
 
 enum CellSize: CGFloat{
-    case small = 200
-    case medium = 300
-    case large = 400
+    case small = 100
+    case medium = 150
+    case large = 200
 }
 
 struct MovieCell_Previews: PreviewProvider {

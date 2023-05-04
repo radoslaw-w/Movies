@@ -1,5 +1,5 @@
     //
-    //  MoviesTests.swift
+    //  ContentViewModelTests.swift
     //  MoviesTests
     //
     //  Created by Radoslaw Winkler on 03/05/2023.
