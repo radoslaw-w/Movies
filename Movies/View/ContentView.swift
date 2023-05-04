@@ -1,9 +1,9 @@
-//
-//  ContentView.swift
-//  Movies
-//
-//  Created by Radoslaw Winkler on 03/05/2023.
-//
+    //
+    //  ContentView.swift
+    //  Movies
+    //
+    //  Created by Radoslaw Winkler on 03/05/2023.
+    //
 
 import Dependencies
 import SwiftUI
@@ -15,9 +15,15 @@ struct ContentView: View {
         if viewModel.message != nil {
             Text(viewModel.message!)
         }else{
-            List(viewModel.movies, id:\.id){ movie in
-                Text(movie.originalTitle)
-                Text(movie.genres.joined(separator:", "))
+            ScrollView(.vertical){
+                VStack(alignment: .leading){
+                    Text("Small")
+                    Carousel(movies: viewModel.movies,size: .small)
+                    Text("Medium")
+                    Carousel(movies: viewModel.movies, size: .medium)
+                    Text("Large")
+                    Carousel(movies: viewModel.movies,size: .large)
+                }
             }
         }
     }
